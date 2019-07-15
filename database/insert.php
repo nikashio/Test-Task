@@ -8,8 +8,6 @@ if (isset($_POST['submit'])) {
   $email = $_POST['email'];
 
 
-
-
 // validate input data
 $errorEmpty = false;
 $errorEmail = false;
@@ -24,9 +22,12 @@ $errorEmail = false;
   }
   else {
     echo "<span class='form-success'>Form was Submited Successfuly!</span>";
-
+    
+    //insert data to databse
      $insert=new Dbh();
      $insert->insertData($firstName,$lastName,$email);
+
+     //send mail to mailhog
      $obj=new sendmail();
      $obj->phpsendmail($firstName,$lastName,$email);
   }}
