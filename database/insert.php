@@ -7,10 +7,21 @@ if (isset($_POST['submit'])) {
   $lastName = $_POST['lastName'];
   $email = $_POST['email'];
 
-  $errorEmpty = false;
-  $errorEmail = false;
+//Send signup form details to test@developers-alliance.com
+$to = 'test@developers-alliance.com';
+$subject = 'Submit form detailes';
+$message = "First Name :".$firstName."\r\nLast Name :".$lastName."\r\nEmail Address :".$email;
+
+//Header
+$header = 'From:'.$firstName.'<'.$email.'>\n';
+mail($to, $subject,  $message,$header);
+
+
 
 // validate input data
+$errorEmpty = false;
+$errorEmail = false;
+
   if(empty($firstName) || empty($lastName) || empty($email)) {
     echo "<span class='form-error'> * Fill in all Fields!</span> ";
     $errorEmpty = true;
