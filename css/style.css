@@ -1,11 +1,9 @@
-
 body {
   margin: 0;
   padding: 0;
   background-color: #f5fffc;
   box-sizing: border-box;
 }
-
 .form-container {
   width: 85%;
   max-width: 600px;
@@ -19,24 +17,17 @@ body {
   text-align: center;
   box-shadow: 0 0 20px #000000b3;
 }
-
-
-/* title styles */
-.contact-form h1 {
+.form-container h1 {
   margin-top: 0;
   font-weight: 200;
-  color: #16a085;
+  color: #3c559e;
 }
-
-
-/* form container style */
 .txtb {
   border: 1px solid gray;
   margin: 8px 0;
   padding: 12px 18px;
   border-radius: 10px;
 }
-
 .txtb label {
   display: block;
   text-align: left;
@@ -44,8 +35,6 @@ body {
   text-transform: uppercase;
   font-size: 14px;
 }
-
-/* form styles */
 .txtb input {
   width: 100%;
   border: none;
@@ -54,9 +43,6 @@ body {
   font-size: 13px;
   margin-top: 6px;
 }
-
-
-/* submit button styles */
 #submit {
   display: inline-block;
   background: #3c559e;
@@ -70,14 +56,9 @@ body {
   border: none;
   outline: none;
 }
-
 #submit:hover {
   background-color: #162c6b;
 }
-
-
-
-/* eror message styles */
 .form-message {
   font-size: 20px;
   font-weight: 600;
