@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #f5fffc;
+  background-color: #6ea5ff;
   box-sizing: border-box;
 }
 .form-container {
@@ -63,12 +63,12 @@ body {
   font-size: 20px;
   font-weight: 600;
 }
-.form-success {
-  color: green;
+.form-message .form-success {
+  color: #008f05;
 }
-.form-error {
-  color: #ff0022;
+.form-message .form-error {
+  color: #ff0000;
 }
-.input-error {
-  box-shadow: 0px 2px 0px 0px #ff0022;
+.form-message .input-error {
+  box-shadow: 0px 2px 0px 0px #ff0000;
 }

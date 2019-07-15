@@ -7,14 +7,6 @@ if (isset($_POST['submit'])) {
   $lastName = $_POST['lastName'];
   $email = $_POST['email'];
 
-//Send signup form details to test@developers-alliance.com
-$to = 'test@developers-alliance.com';
-$subject = 'Submit form detailes';
-$message = "First Name :".$firstName."\r\nLast Name :".$lastName."\r\nEmail Address :".$email;
-
-//Header
-$header = 'From:'.$firstName.'<'.$email.'>\n';
-mail($to, $subject,  $message,$header);
 
 
 
@@ -32,8 +24,11 @@ $errorEmail = false;
   }
   else {
     echo "<span class='form-success'>Form was Submited Successfuly!</span>";
-    $obj=new Dbh();
-    $obj->insertData($firstName,$lastName,$email);
+
+     $insert=new Dbh();
+     $insert->insertData($firstName,$lastName,$email);
+     $obj=new sendmail();
+     $obj->phpsendmail($firstName,$lastName,$email);
   }}
   else {
     echo "There was an Error!  ";

@@ -11,7 +11,6 @@ class Dbh{
  $this->conn = new PDO("mysql:host=".$this->host.";dbname=".$this->db,$this->user,$this->pass);
  }
 
-
  public function insertData($firstName,$lastName,$email){
    $sql = "INSERT INTO info SET firstName=:firstName,lastName=:lastName,email=:email";
    $q = $this->conn->prepare($sql);
@@ -19,6 +18,23 @@ class Dbh{
    return true;
  }
 }
+
+class sendmail{
+
+  private  $to = 'test@developers-alliance.com';
+  private  $subject = 'Submit form detailes';
+
+  public function phpsendmail($firstName,$lastName,$email){
+    $message = "first Name :".$firstName;
+    $message .= "\r\nLast Name :".$lastName;
+    $message .= "\r\nEmail Address :".$email;
+    $header = 'From:'.$firstName.'<'.$email.'>\n';
+    return   mail($this->to, $this->subject,  $message,$header);
+
+  }
+
+}
+
 
 
 ?>
