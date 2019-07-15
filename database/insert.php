@@ -32,7 +32,7 @@ $errorEmail = false;
   }
   else {
     echo "<span class='form-success'>Form was Submited Successfuly!</span>";
-    $obj=new oopCrud();
+    $obj=new Dbh();
     $obj->insertData($firstName,$lastName,$email);
   }}
   else {

@@ -1,6 +1,6 @@
 <?php
 
-class oopCrud{
+class Dbh{
  private $host="localhost";
  private $user="root";
  private $db="db";
