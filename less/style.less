@@ -1,66 +1,62 @@
 // Variables
-
-
 @btn-color : #3c559e; //blue
-@btn-color-hover:  darken(@btn-color, 10%);
+@btn-color-hover:  darken(@btn-color, 15%);
 @error-txt-color : #ff0000;//red
 @sucess-txt-Color : #008f05;//green
 @bg-color : #6ea5ff;//light blue
 @container-color : #f1f1f1;//white
 
 body{
-
-
   margin: 0;
   padding: 0;
   background-color: @bg-color;
   box-sizing: border-box;
+  .form-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 85%;
+    max-width: 600px;
+    background: @container-color;
+    transform: translate(-50%,-50%);
+    padding: 30px 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 20px #000000b3;
+
+        //form title stlye
+        h1{
+          margin-top: 0;
+          font-weight: 200;
+          color: @btn-color;
+        }
+        //input outline
+        .txtb{
+          border:1px solid @btn-color;
+          margin: 8px 0;
+          padding: 12px 18px;
+          border-radius: 10px;
+               label{
+                display: block;
+                text-align: left;
+                color: @btn-color;
+                text-transform: uppercase;
+                font-size: 14px;
+                font-weight: bold;
+              }
+              input{
+                width: 100%;
+                border: none;
+                outline: none;
+                background: none;
+                font-size: 13px;
+                margin-top: 6px;
+              }
+        }
+  }
 }
 
-.form-container{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 85%;
-  max-width: 600px;
-
-  background: @container-color;
-  transform: translate(-50%,-50%);
-  padding: 30px 40px;
-  border-radius: 15px;
-  text-align: center;
-  box-shadow: 0 0 20px #000000b3;
-      h1{
-        margin-top: 0;
-        font-weight: 200;
-        color: @btn-color;
-      }
-}
-
-
-.txtb{
-  border:1px solid @btn-color;
-  margin: 8px 0;
-  padding: 12px 18px;
-  border-radius: 10px;
-       label{
-        display: block;
-        text-align: left;
-        color: @btn-color;
-        text-transform: uppercase;
-        font-size: 14px;
-        font-weight: bold;
-      }
-      input{
-        width: 100%;
-        border: none;
-        background: none;
-        outline: none;
-        font-size: 13px;
-        margin-top: 6px;
-      }
-}
-
+//submit button stlye
 #submit{
   display: inline-block;
   background: @btn-color;
@@ -73,12 +69,13 @@ body{
   border-radius: 10px;
   border: none;
   outline: none;
+  &:hover{
+    background-color: @btn-color-hover;
+  }
 }
 
-#submit:hover{
-  background-color: @btn-color-hover;
-}
 
+//error\sucess message styles
 .form-message{
   font-size: 20px;
   font-weight: 600;

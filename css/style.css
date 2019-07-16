@@ -4,7 +4,7 @@ body {
   background-color: #6ea5ff;
   box-sizing: border-box;
 }
-.form-container {
+body .form-container {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -17,18 +17,18 @@ body {
   text-align: center;
   box-shadow: 0 0 20px #000000b3;
 }
-.form-container h1 {
+body .form-container h1 {
   margin-top: 0;
   font-weight: 200;
   color: #3c559e;
 }
-.txtb {
+body .form-container .txtb {
   border: 1px solid #3c559e;
   margin: 8px 0;
   padding: 12px 18px;
   border-radius: 10px;
 }
-.txtb label {
+body .form-container .txtb label {
   display: block;
   text-align: left;
   color: #3c559e;
@@ -36,11 +36,11 @@ body {
   font-size: 14px;
   font-weight: bold;
 }
-.txtb input {
+body .form-container .txtb input {
   width: 100%;
   border: none;
-  background: none;
   outline: none;
+  background: none;
   font-size: 13px;
   margin-top: 6px;
 }
@@ -58,7 +58,7 @@ body {
   outline: none;
 }
 #submit:hover {
-  background-color: #2e4179;
+  background-color: #273767;
 }
 .form-message {
   font-size: 20px;
